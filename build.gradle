@@ -36,8 +36,8 @@ dependencies {
 
 application {
     // Define the main class for the application
-    getMainClass().set('inkball.App')
-}
+    getMainClass().set('minesweeper.App')
+}   
 
 test {
     // Use junit platform for unit tests
@@ -48,7 +48,7 @@ test {
 jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
-        attributes 'Main-Class': 'inkball.App'
+        attributes 'Main-Class': 'minesweeper.App'
     }
     from {
         configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
